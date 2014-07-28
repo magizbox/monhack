@@ -52,10 +52,10 @@ Classes = [
    {
       "name" : "Remote",
       "functions": [
-         {"name":"fetch (todo)"},
-         {"name":"remote (todo)"},
          {"name":"push (todo)"},
          {"name":"pull (todo)"},
+         {"name":"fetch (todo)"},
+         {"name":"remote (todo)"},
       ]
    },
    {
