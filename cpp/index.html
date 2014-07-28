@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html ng-app="TutorialApp">
+<head ng-controller="TutorialController">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="target-densitydpi=device-dpi" />
+  <meta name="HandheldFriendly" content="true"/>
+  <link rel="stylesheet" href="styles/main.css" type="text/css" />
+
+  <title>{{ module.name }}</title>
+</head>
+<body ng-controller="TutorialController">
+
+   <!--====================================================================== 
+                                   Sidebar 
+     ====================================================================== -->
+  <div id="sidebar" class="interface">
+    <a class="toc_title" href="#">
+       {{ module.name }} <span class="version">({{ module.version }})</span>
+    </a>
+    <a class="toc_title" href="#">
+      Introduction
+    </a>
+   <ul class="toc_section">
+      <li>» <a href="#life-cycle-status">File Lifecycle Status</a></li>
+   </ul>
+   <div id="classes-menu" ng-repeat="class in module.classes">
+      <a class="toc_title" href="#{{ class.name.trim()}}" >
+         {{ class.name }}
+      </a>
+      <ul class="toc_section" ng-repeat="function in class.functions">
+         <li>- 
+            <a href="#{{ function.name.trim() }}">{{ function.name }}</a>
+         </li>
+      </ul>
+   </div>  <!-- ./.classes-menu -->
+
+  </div> <!-- ./#sidebar -->
+
+  <div class="container">
+
+   <!--====================================================================== 
+                                  Introduction 
+     ====================================================================== -->
+   <h1>{{ module.name }}</h1>
+   <span ng-bind-html="module.introduction"></span>
+   <div id="life-cycle-status">
+      <h2>File Lifecycle Status</h2>
+      <img src="images\file_status_lifecycle.PNG"></img>
+      <p>
+         Remember that <b>each ﬁle</b> in your working directory can be in <b>one of two states</b>:
+<tt>tracked</tt> or <tt>untracked</tt>.
+<ul>
+   <li>
+         <tt>Tracked ﬁles</tt> are ﬁles that were in the last snapshot; they can
+be <tt>unmodiﬁed</tt>, <tt>modiﬁed</tt>, or <tt>staged</tt>.
+   </li>
+   <li>
+         <tt>Untracked ﬁles</tt> are everything else - any ﬁles in
+your working directory that were not in your last snapshot and are not in your staging
+area.
+   </li>
+</ul>
+      </p>
+      <p>
+         When you <b>ﬁrst clone</b> a repository, all of your ﬁles will be <tt>tracked</tt> and <tt>unmodiﬁed</tt>
+because you just checked them out and haven’t edited anything.
+      </p>
+      <p>
+As you <b>edit ﬁles</b>, Git sees them as <tt>modiﬁed</tt>, because you’ve changed them since
+your last commit. You <b>stage</b> these <tt>modiﬁed ﬁles</tt> and then <b>commit</b> all your <tt>staged
+   changes</tt>, and the cycle repeats.
+      </p>
+   </div> <!-- ./#file_status_lifecycle -->
+   <!--====================================================================== 
+                                 Documentation 
+     ====================================================================== -->
+    <div id="documentation">
+
+      <div ng-repeat="class in module.classes">
+         <h2 id="{{ class.name.trim() }}">{{ class.name }}</h2>
+         <div id="{{ currentFunction.name.trim() }}" ng-repeat="currentFunction in class.functions">
+            <p>
+               <b class="header">{{ currentFunction.name }}</b>
+               <code>{{ currentFunction.signature }}</code>
+               <span class="alias" ng-show="function.alias.length > 0">
+                  Alias: <b ng-repeat="alias in function.alias">{{ alias }}</b>
+               </span>
+               <br/>
+               <span ng-bind-html="currentFunction.description"></span>
+            </p>
+<pre>
+{{ currentFunction.code }}
+</pre>
+         </div> <!-- /#function -->
+      </div> <!-- ./#documentation -->
+
+   </div> <!-- ./.container -->
+
+  <!-- Include Underscore, so you can play with it in the console. -->
+  <script type="text/javascript" src="classes.js"></script>
+  <script type="text/javascript" src="config.js"></script>
+  <script type="text/javascript" src="scripts/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/angular.main.js"></script>
+  <script type="text/javascript" src="scripts/angular-sanitize.min.js"></script>
+</body>
+</html>

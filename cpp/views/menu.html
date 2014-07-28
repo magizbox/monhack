@@ -1,0 +1,13 @@
+<!--====================================================================== 
+                                 Menu 
+   ====================================================================== -->
+<div ng-repeat="class in module.classes">
+   <a class="toc_title" href="#{{ class.name.trim()}}" >
+      {{ class.name }}
+   </a>
+   <ul class="toc_section" ng-repeat="currentFunction in class.functions">
+      <li>- 
+         <a href="#{{ currentFunction.trim() }}">{{ currentFunction }}</a>
+      </li>
+   </ul>
+</div>
