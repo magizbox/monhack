@@ -1,1 +1,156 @@
-hello git
+<!DOCTYPE HTML>
+<html ng-app="TutorialApp">
+<head ng-controller="TutorialController">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="target-densitydpi=device-dpi" />
+  <meta name="HandheldFriendly" content="true"/>
+  <link rel="stylesheet" href="styles/main.css" type="text/css" />
+
+  <title>{{ module.name }}</title>
+</head>
+<body ng-controller="TutorialController">
+
+   <!--====================================================================== 
+                                   Sidebar 
+     ====================================================================== -->
+  <div id="sidebar" class="interface">
+    <a class="toc_title" href="#">
+       {{ module.name }} <span class="version">({{ module.version }})</span>
+    </a>
+    <a class="toc_title" href="#">
+      Introduction
+    </a>
+    <a class="toc_title" href="#all-i-know-about-git">
+       All I know about git
+    </a>
+   <ul class="toc_section">
+      <li>» <a href="#version-control">Version Control</a></li>
+      <li>» <a href="#life-cycle-status">File Lifecycle Status</a></li>
+      <li>» <a href="#branches">Branches</a></li>
+      <li>» <a href="#resources">Resources</a></li>
+   </ul>
+   <div id="classes-menu" ng-repeat="class in module.classes">
+      <a class="toc_title" href="#{{ class.name.trim()}}" >
+         {{ class.name }}
+      </a>
+      <ul class="toc_section" ng-repeat="function in class.functions">
+         <li>- 
+            <a href="#{{ function.name.trim() }}">{{ function.name }}</a>
+         </li>
+      </ul>
+   </div>  <!-- ./.classes-menu -->
+
+  </div> <!-- ./#sidebar -->
+
+  <div class="container">
+
+   <!--====================================================================== 
+                                  Introduction 
+     ====================================================================== -->
+   <img src=".\images\logo.png" style="height:150px; width:auto;"></img>
+   <h1>{{ module.name }}</h1>
+   <span ng-bind-html="module.introduction"></span>
+   <table>
+      <tr>
+         <td>
+            <a href="https://www.youtube.com/watch?v=4XpnKHJAok8" target="_blank">
+               <img src=".\images\intro_video_1.png"><img>
+            </a>
+         </td>
+         <td>
+            <a href="https://www.youtube.com/watch?v=ZDR433b0HJY" target="_blank">
+               <img src=".\images\intro_video_2.png"><img>
+            </a>
+         </td>
+      </tr>
+   </table>
+
+   <h1 id="all-i-know-about-git">All I know about Git</h1>
+   <div id="version-control">
+      <h2>Version Control</h2>
+      <img src=".\images\improve.png"></img>
+      <img src=".\images\history tracking.png"></img>
+      <img src=".\images\history trachking 1.png"></img>
+      <img src=".\images\history trachking 2.png"></img>
+      <img src=".\images\collaboration.png"></img>
+      <img src=".\images\collaboration 1.png"></img>
+   </div>
+   <div id="life-cycle-status">
+      <h2>File Lifecycle Status</h2>
+      <img src="images\file_status_lifecycle.PNG"></img>
+      <p>
+         Remember that <b>each ﬁle</b> in your working directory can be in <b>one of two states</b>:
+<tt>tracked</tt> or <tt>untracked</tt>.
+<ul>
+   <li>
+         <tt>Tracked ﬁles</tt> are ﬁles that were in the last snapshot; they can
+be <tt>unmodiﬁed</tt>, <tt>modiﬁed</tt>, or <tt>staged</tt>.
+   </li>
+   <li>
+         <tt>Untracked ﬁles</tt> are everything else - any ﬁles in
+your working directory that were not in your last snapshot and are not in your staging
+area.
+   </li>
+</ul>
+      </p>
+      <p>
+         When you <b>ﬁrst clone</b> a repository, all of your ﬁles will be <tt>tracked</tt> and <tt>unmodiﬁed</tt>
+because you just checked them out and haven’t edited anything.
+      </p>
+      <p>
+As you <b>edit ﬁles</b>, Git sees them as <tt>modiﬁed</tt>, because you’ve changed them since
+your last commit. You <b>stage</b> these <tt>modiﬁed ﬁles</tt> and then <b>commit</b> all your <tt>staged
+   changes</tt>, and the cycle repeats.
+      </p>
+   </div> <!-- ./#file_status_lifecycle -->
+   <div id="branches">
+      <h2>Branches</h2>
+      <img src="images\branches.png"></img>
+      <p>
+      <b>Branches</b> are an excellent way to not only work <tt>safely on features</tt> or <tt>experiments</tt>, but they are also the key element in <tt>creating Pull Requests</tt> on GitHub.
+      </p>
+   </div> <!-- ./#branches -->
+   <div id="resources">
+      <h2>Resources</h2>
+      <ul>
+         <li>YouTube, (2014). <i>GitHub Training &amp; Guides</i>. [online] Available at: <a target="_blank" href="https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw">https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw</a> [Accessed 23 Jul. 2014].</li>
+            <li>Try Git, (2014). Try Git. [online] Available at: <a target="_blank" href="https://try.github.io/levels/1/challenges/1">https://try.github.io/levels/1/challenges/1</a> [Accessed 23 Jul. 2014].</li>
+         <li>Chacon, S. (2009). Pro Git. 1st ed. Berkeley, CA: Apress.</li>
+         <li>Rogerdudler.github.io, (2014). git - the simple guide - no deep shit!. [online] Available at: <a target="_blank" href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a> [Accessed 24 Jul. 2014].</li>
+      </ul>
+   </div>
+   <!--====================================================================== 
+                                 Documentation 
+     ====================================================================== -->
+    <div id="documentation">
+
+      <div ng-repeat="class in module.classes">
+         <h2 id="{{ class.name.trim() }}">{{ class.name }}</h2>
+         <div id="{{ currentFunction.name.trim() }}" ng-repeat="currentFunction in class.functions">
+            <p>
+               <b class="header">{{ currentFunction.name }}</b>
+               <code>{{ currentFunction.signature }}</code>
+               <span class="alias" ng-show="function.alias.length > 0">
+                  Alias: <b ng-repeat="alias in function.alias">{{ alias }}</b>
+               </span>
+               <br/>
+               <span ng-bind-html="currentFunction.description"></span>
+            </p>
+<pre>
+{{ currentFunction.code }}
+</pre>
+         </div> <!-- /#function -->
+      </div> <!-- ./#documentation -->
+
+   </div> <!-- ./.container -->
+
+  <!-- Include Underscore, so you can play with it in the console. -->
+  <script type="text/javascript" src="classes.js"></script>
+  <script type="text/javascript" src="config.js"></script>
+  <script type="text/javascript" src="scripts/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/angular.main.js"></script>
+  <script type="text/javascript" src="scripts/angular-sanitize.min.js"></script>
+</body>
+</html>
