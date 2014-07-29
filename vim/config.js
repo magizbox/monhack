@@ -1,6 +1,6 @@
 Config = {
-   "name" : "Linux",
-   "introduction": "Linux is a Unix-like and mostly POSIX-compliant computer operating system assembled under the model of free and open source software development and distribution. The defining component of Linux is the Linux kernel, an operating system kernel first released on <b>5 October 1991</b> by <b>Linus Torvalds</b>. The Free Software Foundation uses the name GNU/Linux, which has led to some controversy.",
+   "name" : "Vim",
+   "introduction": "Vim (a contraction of Vi IMproved) is a text editor written by <b>Bram Moolenaar</b> and first released publicly in <b>1991</b>. Based on the vi editor common to Unix-like systems, Vim is designed for use both from a <tt>command line</tt> interface and as a standalone application in a <tt>graphical user interface</tt>. Vim is <b>free</b> and <b>open source</b> software and is released under a license that includes some charityware clauses, encouraging users who enjoy the software to consider donating to children in Uganda\n. The license is compatible with the GNU General Public License.",
    "version": "3.15.6"
 };
 
