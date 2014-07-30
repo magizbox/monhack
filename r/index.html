@@ -22,6 +22,9 @@
     <a class="toc_title" href="#">
       Introduction
     </a>
+    <ul class="toc_section">
+      <li>» <a href="#resources">Resources</a></li>
+    </ul>
    <ul class="toc_section">
    </ul>
    <div id="classes-menu" ng-repeat="class in module.classes">
@@ -44,6 +47,17 @@
      ====================================================================== -->
    <h1>{{ module.name }}</h1>
    <span ng-bind-html="module.introduction"></span>
+   
+   <!--====================================================================== 
+                                  Resources
+     ====================================================================== -->
+   <div id="resources">
+       <h2>Resources</h2>
+       <ul>
+           <li><span class="selectable">Try R, (2014). <i>Try R</i>. [online] Available at: http://tryr.codeschool.com/ [Accessed 29 Jul. 2014].</span></li>
+           <li><span class="selectable">Ats.ucla.edu, (2014). <i>R Starter Kit</i>. [online] Available at: http://www.ats.ucla.edu/stat/r/sk/ [Accessed 29 Jul. 2014].</span></li>
+       </ul>
+   </div>
    <!--====================================================================== 
                                  Documentation 
      ====================================================================== -->

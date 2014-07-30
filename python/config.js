@@ -1,7 +1,7 @@
 Config = {
-   "name" : "C++",
-   "introduction": "C++ (pronounced cee plus plus) is a general purpose programming language. It has <b>imperative</b>, <b>object-oriented</b> and <b>generic programming</b> features, while also providing the facilities for low level memory manipulation.<br/>It is designed with a bias for <tt>systems programming</tt> (e.g. embedded systems, operating system kernels), with <tt>performance</tt>, <tt>efficiency</tt> and <tt>flexibility</tt> of use as its design requirements. C++ has also been found useful in many other contexts, including desktop applications, servers (e.g. e-commerce, web search, SQL), performance critical applications (e.g. telephone switches, space probes) and entertainment software, such as video games.",
-   "version": "14"
+   "name" : "Python",
+   "introduction": "Python is a widely used <b>general-purpose</b>, <b>high-level</b> programming language. Its design <tt>philosophy</tt> emphasizes <b>code readability</b>, and its <tt>syntax</tt> allows <tt>programmers</tt> to <b>express concepts</b> in fewer lines of code than would be possible in languages such as C. The language provides constructs intended to enable clear programs on both a small and large scale.",
+   "version": "2.7"
 };
 
 Config.classes = Classes;

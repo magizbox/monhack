@@ -1,9 +1,8 @@
 Classes = [
    {
-      "name" : "g++",
+      "name" : "Itertools",
       "functions": [
-         {"name":"c","code":"g++ -c hello.cc\n=> Compile hello.cc file, the output is hello.o\ng++ -c world.cc\n=> Compile world.cc file, the output is world.o","signature":"g++ -c sources","description":"Compile only. Produces <tt>.o files</tt> from <b>source</b> files without doing any linking."},
-        {"name":"o","code":"g++ -o hello.exe hello.o world.o\n=> place the output to hello.exe file.","signature":"g++ -o dest_file file1.o file2.o","description":"Link option, usually. Use <b>dest_file</b> as the <tt>name of the file</tt> produced by g++ (usually, this is an executable file)."},
+         {"name":"combinations","code":"[element for element in itertools.combinations('ABCD', 2)]\n=> [('A', 'B'), ('A', 'C'), ('A', 'D'), ('B', 'C'), ('B', 'D'), ('C', 'D')]\n[element for element in itertools.combinations(range(4), 3)]\n=> [(0, 1, 2), (0, 1, 3), (0, 2, 3), (1, 2, 3)]\n[element for element in itertools.combinations('AA', 1)]\n=> [('A',), ('A',)]","signature":"itertools.combinations(iterable, r)","description":"Return <b>r</b> length <tt>subsequences of elements</tt> from the input <b>iterable</b>. <tt>Combinations</tt> are emitted in <tt>lexicographic sort order</tt>. So, if the input <b>iterable</b> is <tt>sorted</tt>, the <b>combination tuples</b> will be produced in <tt>sorted order</tt>. <tt>Elements</tt> are treated as unique based on their position, not on their value. So if the input elements are <tt>unique</tt>, there will be <tt>no repeat</tt> values in each combination."},
       ]
    },
 ];
