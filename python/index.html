@@ -46,11 +46,11 @@
    <h1>{{ module.name }}</h1>
    <span ng-bind-html="module.introduction"></span>
    <div id="resources">
-      <h2>Resources</h2>
+        <h2>Resources</h2>
         <ul>
-           <li>
-            Compileonline.com, (2014). Execute Python Script Online. [online] Available at: http://www.compileonline.com/execute_python_online.php [Accessed 30 Jul. 2014].
-           </li>
+            <li ng-repeat="currentResource in module.resources">
+               {{ currentResource.author }}, ({{ currentResource.year }}). <i>{{ currentResource.title }}</i>. Available at <a target="_blank" href="{{ currentResource.url }}">{{ currentResource.url }}</a> [Accessed {{ currentResource.date }}].
+            </li>
         </ul>
    </div> <!-- ./#resources -->
    <!--====================================================================== 
