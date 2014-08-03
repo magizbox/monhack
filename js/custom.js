@@ -7,3 +7,4 @@
 	new WOW().init();
 
 })(jQuery);
+

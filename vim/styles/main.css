@@ -174,3 +174,8 @@ pre {
    overflow: scroll;
 }
 }
+
+.function-description img {
+    height: 300px;
+    width: auto;
+}
