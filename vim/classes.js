@@ -39,6 +39,12 @@ Classes = [
         ]
     },
     {
+        "name": "Outline",
+        "functions": [
+            {"name":"tagbar","code":"TagbarToggle\n=> toggle the Tagbar window","signature":"tagbar","description":"Tagbar is a vim plugin for <tt>browsing the tags</tt> of source code files. It provides a <tt>sidebar</tt> that displays the ctags-generated tags of the current file, ordered by their scope.<br/>\n<b>Install</b> <br/>\nexuberant ctags 5.5<br>\n* windows: <tt>download ctags</tt><br/>\n* ubuntu: <tt>sudo apt-get install exuberant-ctags</tt><br/>\ntagbar<br/>\n* <tt>git clone git clone git://github.com/majutsushi/tagbar</tt>"},
+        ]
+    },
+    {
         "name": "Autocomplete",
         "functions": [
             {},
