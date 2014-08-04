@@ -23,6 +23,7 @@
       Introduction
     </a>
    <ul class="toc_section">
+      <li>» <a href="#resources">Resources</a></li>
    </ul>
    <div id="classes-menu" ng-repeat="class in module.classes">
       <a class="toc_title" href="#{{ class.name.trim()}}" >
@@ -44,6 +45,14 @@
      ====================================================================== -->
    <h1>{{ module.name }}</h1>
    <span ng-bind-html="module.introduction"></span>
+   <div id="resources">
+        <h2>Resources</h2>
+        <ul>
+            <li ng-repeat="currentResource in module.resources">
+               {{ currentResource.author }}, ({{ currentResource.year }}). <i>{{ currentResource.title }}</i>. Available at <a target="_blank" href="{{ currentResource.url }}">{{ currentResource.url }}</a> [Accessed {{ currentResource.date }}].
+            </li>
+        </ul>
+   </div> <!-- ./#resources -->
    <!--====================================================================== 
                                  Documentation 
      ====================================================================== -->

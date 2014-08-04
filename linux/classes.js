@@ -7,7 +7,37 @@ Classes = [
       ]
    },
    {
-      "name" : "Processes (todo)",
+      "name" : "Process (todo)",
+      "functions": [  
+         
+      ]
+   },
+   {
+      "name" : "System Configuration (todo)",
+      "functions": [  
+         
+      ]
+   },
+   {
+      "name" : "User Enviroments (todo)",
+      "functions": [  
+         
+      ]
+   },
+   {
+      "name" : "Security (todo)",
+      "functions": [  
+         
+      ]
+   },
+   {
+      "name" : "Log (todo)",
+      "functions": [  
+         
+      ]
+   },
+   {
+      "name" : "Bash (todo)",
       "functions": [  
          
       ]
@@ -16,7 +46,7 @@ Classes = [
       "name" : "Software",
       "functions": [  
          {"name":"ssh-server","code":"sudo apt-get install openssh-server","signature":"","description":"install ssh server "},
-         {"name":"Remote Desktop","code":"sudo apt-get install xrdp\n=> install xrdp for linux","signature":"","description":"Remote desktop server for linux. Using <tt>xrdp</tt> or <tt><a href=\"https://www.nomachine.com/download\">nomachine</a></tt>."},
+         {"name":"remote desktop","code":"sudo apt-get install xrdp\n=> install xrdp for linux","signature":"","description":"Remote desktop server for linux. Using <tt>xrdp</tt> or <tt><a href=\"https://www.nomachine.com/download\">nomachine</a></tt>."},
       ]
    },
 ];
