@@ -4,8 +4,12 @@ Monster Documentation
 Documentation for monster
 =======
 
-| Techonology   |      Reference      |  Cool |
-|---------------|:-------------------:|------:|
-| col 1 is      |  left-aligned       | $1600 |
-| col 2 is      |    centered         |   $12 |
-| col 3 is      | right-aligned       |    $1 |
+| Techonology   |      Reference      |     Document    |
+|---------------|:-------------------:|:---------------:|
+| HTML          |          +          |                 |
+| CSS           |          +          |                 |
+| Wiki          |          +          |                 |
+| Jquery        |          +          |                 |
+| Git           |          +          |        +        |
+| Java          |          -          |                 |
+| Javascript    |          -          |                 |
