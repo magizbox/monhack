@@ -13,3 +13,5 @@ Documentation for monster
 | Git           |          +          |        +        |
 | Java          |                     |                 |
 | Javascript    |                     |                 |
+| Linux         |          +          |                 |
+| Bash Windows  |                     |                 |
