@@ -11,5 +11,5 @@ Documentation for monster
 | Wiki          |          +          |                 |
 | Jquery        |          +          |                 |
 | Git           |          +          |        +        |
-| Java          |          -          |                 |
-| Javascript    |          -          |                 |
+| Java          |                     |                 |
+| Javascript    |                     |                 |
