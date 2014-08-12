@@ -71,6 +71,17 @@ Classes = [
       ]
    },
    {
+      "name" : "Labels",
+      "functions": [
+         {"name":"wontfix","code":"","signature":"","description":""},
+         {"name":"question","code":"","signature":"","description":""},
+         {"name":"invalid","code":"","signature":"","description":""},
+         {"name":"help wanted","code":"","signature":"","description":""},
+         {"name":"duplicate","code":"","signature":"","description":""},
+         {"name":"bug","code":"","signature":"","description":""},
+      ]
+   },
+   {
       "name" : "NExt",
       "functions": [
 
