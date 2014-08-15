@@ -7,6 +7,12 @@ Classes = [
       ]
    },
    {
+      "name" : "File Explorer",
+      "functions": [
+         {"name":"Dolphin","code":"","signature":"","description":""},
+      ]
+   },
+   {
       "name" : "Process (todo)",
       "functions": [  
          
